@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Proj C-LATEST</title>
+  </head>
+  <style>
+		body {
+  overflow-y: hidden; /* Hide vertical scrollbar */
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+		</style>
+
+  <body onload="main()">
+    <canvas id="webgl" width="600" height="600">
+    Please use a browser that supports "canvas"
+    </canvas>
+    <p>
+    
+      <button type="button" onclick="VBO1toggle()">Change Shading</button>
+      <button type="button" onclick="VBO2toggle()">Change Lighting</button>
+      <b>Press P to turn on/off the light</b>
+      Current Shading and Lighting:
+      <b id="shade"> Gouraud Shading </b> <b id="light"> and Phong Lighting</b> 
+    </p>
+
+    <p>
+      <b>Press W A S D to change the looking position of the camera (The location of the camera would stay the same).   Press the arrow keys to freely move the camera in the space.
+</b>
+
+    </p>
+    <b>Default RGB values would be 1 and you can adjust them between 0 to 10. </b>
+    <b>You can also drag the position of the light source.</b>
+    <div class="slider1">
+      <input type="range" min="0" max="10" value="1" step="0.0001" class="sli1" id="range1">
+      ambient  R   
+      <input type="range" min="0" max="10" value="1" step="0.0001" class="sli2" id="range2">
+      ambient  G
+      <input type="range" min="0" max="10" value="1" step="0.0001" class="sli3" id="range3">
+      ambient  B
+    </div>
+    <div class="slider2">
+      <input type="range" min="0" max="10" value="1" step="0.0001" class="sli4" id="range4">
+      diffuse  R
+      <input type="range" min="0" max="10" value="1" step="0.0001" class="sli5" id="range5">
+      diffuse  G
+      <input type="range" min="0" max="10" value="1" step="0.0001" class="sli6" id="range6">
+      diffuse  B
+    </div>
+    <div class="slider3">
+      <input type="range" min="0" max="10" value="1" step="0.0001" class="sli7" id="range7">
+      specular R
+      <input type="range" min="0" max="10" value="1" step="0.0001" class="sli8" id="range8">
+      specular G
+      <input type="range" min="0" max="10" value="1" step="0.0001" class="sli9" id="range9">
+      specular B
+    </div>
+    <div class="slider4">
+      <input type="range" min="-20" max="20" value="8.4292" step="0.00001" class="sli10" id="range10">
+      Light position X
+      <input type="range" min="-20" max="20" value="-0.072" step="0.00001" class="sli11" id="range11">
+      Light position Y
+      <input type="range" min="-20" max="20" value="6.57633" step="0.00001" class="sli12" id="range12">
+      Light position Z
+    </div>
+
+    
+    <script src="./lib/webgl-utils.js"></script>
+    <script src="./lib/webgl-debug.js"></script>
+    <script src="./lib/cuon-utils.js"></script>
+    <script src="./lib/cuon-matrix-quat03.js"></script>
+<!-- YOU SHOULD UPGRADE to Brandon Jones' far-faster, 
+      far more complete vector/matrix/quaternion library: (Google it!)
+		<script src="../lib/glmatrix.js"></script>
+-->   <script src="materials_Ayerdi.js"></script>
+		<script src="DengWenhan_ProjC_VBObox-Lib.js"></script>
+    <script src="DengWenhan_ProjC.js"></script>
+  </body>
+</html>
