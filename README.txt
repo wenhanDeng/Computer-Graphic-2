@@ -1,1 +1,2 @@
-
+# Computer-Graphic
+This project C: Lighting magic demonstrate a few simple 3D assemblies on a grid. They have been made by different materials which could let them react differently with the light source we set up. These assemblies are composed by multiple 3D jointed parts, and they are keep spinning, shifting, and rotating according to varied axes. All these settings directly help us to better observe the different lighting or shading effects on the objects. There are two shading (Gouraud Shading and Phong Shading) and two lighting methods (Phong Lighting and Blinn-Phong Lighting) which can be chosen by the users.
